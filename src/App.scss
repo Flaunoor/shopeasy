@@ -1,0 +1,43 @@
+@import url("https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&display=swap");
+@import "@fontsource/roboto/300.css";
+
+.app__flex {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+  }
+  
+.app__flex-start {
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-start;
+}
+.app__flex-end {
+  display: flex;
+  justify-content: flex-end;
+  align-items: flex-end;
+}
+
+
+.p-title{
+  font-size: 40px;
+  font-family: "Roboto";
+}
+
+.p-text{
+  font-size: 22px;
+  color: black;
+  font-family: "Roboto", sans-serif; 
+  text-align: justify;
+}
+.p-bold{
+  font-size: 50px;
+  font-family: "Roboto";
+  font-weight: bold;
+}
+.p-big{
+  font-size: 100px;
+  font-family:"Roboto";
+
+}

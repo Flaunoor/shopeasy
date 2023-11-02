@@ -1,0 +1,18 @@
+.app__searchbar-paper{
+    padding: 0 1rem;
+    width: 500px;
+    transition: all 0.3s ease-in-out;
+    &:hover{
+        background-color: rgba(128, 128, 128, 0.11);
+    }
+}
+.app__searchbar-btn{
+    padding: 0.5rem;
+}
+.app__searchbar-input{
+    width: 60%;
+    margin:0 1rem;
+    padding: 0rem 0.5rem;
+    padding-top: 0.5rem;
+
+}

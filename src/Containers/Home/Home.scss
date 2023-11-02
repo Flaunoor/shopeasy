@@ -1,0 +1,125 @@
+.app__home-header{
+    display: inline-block;
+    position: relative;
+    width: 100%;
+    height: 100%;
+    img{
+        width: 100%;
+        height: auto; 
+    }
+    div{
+        top: 40%;
+        left:5%;
+        position: absolute;
+        justify-content: space-between;
+       
+
+        span{
+            font-weight: bold;
+            
+        }
+        
+    }
+}
+
+.app__home-section1{
+    margin-top: 2rem;
+}
+
+.app__home-section2{
+   
+    margin: 2rem;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    gap: 5rem;
+    
+
+   
+
+    .img-container{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+   
+        width: 40%;
+        
+        position: relative;
+
+        img{
+            width: 100%;
+            height: 100%;
+        }
+    
+    }
+
+    .p-container{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+        flex-direction: column;
+        width: 25%;
+        
+    }
+}
+
+.app__home-section3{
+    margin: 5rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+
+    .why-us-div{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+       
+        
+        width: 50%;
+    }
+
+
+    .services-div{
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        flex-wrap: wrap;
+        margin: 10rem 1rem;
+        gap: 3rem;
+        
+        div{
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            justify-content: flex-start;
+
+        }
+    }
+}
+
+.shop-now-btn{
+    padding: 1rem 3rem;
+    background-color: transparent;
+    border: solid 1px purple;
+    border-radius: 0.2rem;
+    cursor: pointer;
+    font-size: 20px;
+    color: purple;
+    margin-top: 1.5rem;
+    transition: all 0.3s ease-in-out;
+   
+
+    &:hover{
+        background-color: rgba(128, 128, 128, 0.151);
+        color: black;
+        border-color: black;
+        box-shadow: none;
+    }
+    
+}

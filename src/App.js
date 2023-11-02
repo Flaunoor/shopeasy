@@ -1,8 +1,27 @@
 import React from 'react';
-import './App.css';
+import {BrowserRouter, Route, Routes} from 'react-router-dom';
+
+
+import './App.scss';
+import {Navbar, Home, AllProducts , AboutUs,Contact} from'./Containers';
+import { NotFound } from './Componants';
+
 const App = () => {
   return (
-    <h2 className='app'>APP</h2>
+    <BrowserRouter>
+    <div className='app'>
+      <Navbar/>
+    
+      <Routes>
+        <Route path='/' exact element={<Home/>}/>
+        <Route path='/products' element={<AllProducts/>}/> 
+        <Route path='/contact' element={<Contact/>}/>
+        <Route path='/about' element={<AboutUs/>}/>
+        <Route path='*' element={<NotFound/>}/>
+          
+      </Routes>
+    </div>
+    </BrowserRouter> 
   );
 }
 
