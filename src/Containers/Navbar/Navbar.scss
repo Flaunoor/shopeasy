@@ -38,11 +38,15 @@
     
        .Navbar__NavLink{
         text-decoration: none;
+        border-top: 1px solid transparent;
+        padding: 0.5rem;
         cursor: pointer;
         transition: all 0.3s ease ;
+       
 
         &:hover{
             color: rgba(100, 1, 100, 0.829);
+            border-top: 1px solid rgba(100, 1, 100, 0.829);
         }
         
        }
@@ -63,11 +67,19 @@
     gap: 1rem;
     
 
-    .shop-icon{
+    .shop-icon {
         cursor: pointer;
+        transition: all 0.3s ease ;
+        &:hover{
+            color: rgba(100, 1, 100, 0.829);
+        }
     }
     .favorate-icon{
         cursor: pointer;
+        transition: all 0.3s ease ;
+        &:hover{
+            color: rgba(100, 1, 100, 0.829);
+        }
     }
 
     .sign-out-btn{
@@ -76,7 +88,15 @@
         font-size: 23px;
         color: black;
         font-family: "Roboto";
+
         cursor: pointer;
+        transition: all 0.3s  ease-in-out ;
+
+        &:hover{
+            color: rgba(100, 1, 100, 0.829);
+            
+            
+        }
     }
 }
 

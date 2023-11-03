@@ -8,6 +8,7 @@ import discount from '../Utiles/discount.png';
 import order_tracking from '../Utiles/order_tracking.png';
 import payment from '../Utiles/payment.png';
 import shipping from '../Utiles/shipping.png';
+import shoes_pic from '../Utiles/shoes_pic.png'
 
 
 
@@ -24,5 +25,6 @@ export default{
     discount,
     order_tracking,
     payment,
-    shipping
+    shipping,
+    shoes_pic,
 }

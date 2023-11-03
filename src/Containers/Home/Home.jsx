@@ -1,10 +1,21 @@
 import React from 'react';
 import { useNavigate } from 'react-router-dom';
-
+import { useEffect , useState } from 'react';
 
 import {images} from '../../Constants';
 import { ProductCart } from '../../Componants';
 import './Home.scss';
+
+import Slider from "react-slick";
+
+/*import "slick-carousel/slick/slick.css";
+import "slick-carousel/slick/slick-theme.css";*/
+
+import { Box } from '@mui/material';
+
+/*import { Carousel } from 'react-responsive-carousel';
+import 'react-responsive-carousel/lib/styles/carousel.min.css';*/
+
 
 const Home = () => {
   const navigate = useNavigate();
@@ -12,6 +23,62 @@ const Home = () => {
   const handleClickProduct = () =>{
    navigate("/products");
   }
+
+  const [products , setProducts] = useState([]);
+  useEffect(() => {
+    const getProducts = async () => {
+        try{
+            const response = await fetch('https://dummyjson.com/products');
+            if(!response.ok){
+                throw new Error('Did not receive expected Data');
+            }
+            const jsondata = await response.json();
+            setProducts(jsondata.products);
+        }
+        catch(error){
+            console.error('Error fetching data:', error);
+        }
+       
+    }
+    getProducts();
+  },[]);
+
+  const settings = {
+    dots: false,
+    infinite: true,
+    speed: 2000,
+    slidesToShow: 4,
+    slidesToScroll: 3,
+    autoplay: true,
+    autoplaySpeed: 3000,
+    
+    responsive: [
+      {
+        breakpoint: 1024,
+        settings: {
+          slidesToShow: 2,
+          slidesToScroll: 2,
+          infinite: true,
+          dots: true,
+        },
+      },
+      {
+        breakpoint: 600,
+        settings: {
+          slidesToShow: 2,
+          slidesToScroll: 2,
+          initialSlide: 2,
+        },
+      },
+      {
+        breakpoint: 480,
+        settings: {
+          slidesToShow: 1,
+          slidesToScroll: 1,
+        },
+      },
+    ],
+  };
  
 
 
@@ -30,9 +97,14 @@ const Home = () => {
         <p className='p-text'>Popular Product</p> 
         <p  style={{fontSize:'60px', fontFamily:'normal serif'}}>TRENDING NOW </p>
 
-         <div style={{width:'100%' ,height:'400px', margin:'  2rem 0'}}>
-          <ProductCart/>
+        <div className='sliderContainer'>
+          <Slider {... settings}>
+          {products.map((product , index)=>(
+          <Box key={index}>  {product.id && <ProductCart product={product} /> }</Box>
+          ))}
+          </Slider>
         </div>
+          
       </div>
 
       <div className='app__home-section2'>

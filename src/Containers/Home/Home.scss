@@ -123,3 +123,16 @@
     }
     
 }
+
+.sliderContainer{
+    width: 100rem;
+    height: 100%;
+    margin: 4rem;
+    
+}
+.sliderProducts{
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    align-content: center;
+}

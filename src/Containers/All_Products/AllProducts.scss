@@ -1,0 +1,41 @@
+.app__allProducts{
+    margin-top: 7rem ;
+}
+.slider-container{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 2rem ;
+    padding: 1rem;
+
+    .sliderCategories{
+        width: 60rem;
+        
+
+        .category-item{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            align-content: center;
+            cursor: pointer;
+            padding: 1rem 0rem;
+            transition: all 0.5s ease-in-out ;
+
+            .p-dot{
+                font-size:3rem;
+                font-weight: 600;
+                color: transparent;
+
+            }
+            
+            &:hover{
+                color: rgba(100, 1, 100, 0.829);
+                .p-dot{
+                    color: rgba(100, 1, 100, 0.829);    
+                }
+            }
+        } 
+        
+        
+    }
+}
