@@ -1,4 +1,3 @@
-import React from 'react';
 import {MUI} from '../../Constants';
 import {motion} from 'framer-motion';
 import { NavLink } from 'react-router-dom';
@@ -6,8 +5,17 @@ import {AiFillEye, AiOutlineShoppingCart} from 'react-icons/ai'
 
 import './ProductCart.scss';
 
-const ProductCart = ({product}) => {
-    
+const ProductCart = ({product, setCartItems}) => {
+  
+  const hundleAddToCart =()=>{
+        const userCartItems = JSON.parse(localStorage.getItem('cart-products'));
+
+        const updatedUserCartItems = [...userCartItems, product];
+        localStorage.setItem("cart-products", JSON.stringify(updatedUserCartItems));
+        setCartItems(updatedUserCartItems.length);
+  
+    }
+
   return (
     
       <div className='app__productCart-SingleC app__flex'>
@@ -19,7 +27,7 @@ const ProductCart = ({product}) => {
                     transition={{duration:0.25, ease:'easeInOut',staggerChildren: 0.5}}
                     className='app__productCart-hover app__flex'
                 >
-                    <NavLink>
+                    <NavLink to={product?.id && `/products/${product.id}`}>
                         <motion.div
                             whileInView={{scale:[0,1]}}
                             whileHover={{scale:[1,0.9]}}
@@ -35,6 +43,7 @@ const ProductCart = ({product}) => {
                         whileInView={{scale:[0,1]}}
                         whileHover={{scale:[1,0.9]}}
                         transition={{duration:0.25}}
+                        onClick={hundleAddToCart}
                         className='app__flex'
                     >
                         <AiOutlineShoppingCart/>

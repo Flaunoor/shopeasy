@@ -1,8 +1,17 @@
 .app__navbar{
+    
     width: 100%;
-    
-    
+
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    gap: 8rem;
+
     padding: 1.5rem 3rem;
+    
+
+    
     background-color: rgba(255, 255, 255, 0.25);
     backdrop-filter: blur(4px);
 
@@ -12,50 +21,96 @@
     position: fixed;
     z-index: 2;
 
-}
-
-.app__navbar-logo{
-    flex: 1;
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: flex-start;
-    gap: 0.5rem;
-   
-    .storeIcon{
-        font-size: 40px;
-        
-    }
-    p{
-        cursor: pointer;
+    @media screen and (max-width: 450px) {
+        align-items: flex-start;
+        justify-content: space-between;
+        gap: 4rem;
+        padding: 0.5rem 1rem;
     }
 
 }
 
 
 .app__navbar-links{
-    flex: 1;
     
-       .Navbar__NavLink{
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 2rem;
+    
+    .Navbar__NavLink{ /* each single link*/
         text-decoration: none;
         border-top: 1px solid transparent;
         padding: 0.5rem;
         cursor: pointer;
         transition: all 0.3s ease ;
-       
+
+        
 
         &:hover{
             color: rgba(100, 1, 100, 0.829);
             border-top: 1px solid rgba(100, 1, 100, 0.829);
         }
+
+        @media screen and (max-width: 450px) {
+            display: none;
+            
+        }
+    
+    }
+    @media screen and (max-width: 450px) {
+        display: none;
         
-       }
+    }
+    
     
 }
 
 .active{
     color: rgba(100, 1, 100, 0.829);
 }
+
+.app__navbar-logo{
+    
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+   
+    .storeIcon{
+        font-size: 2.5rem;
+        
+    }
+    p{
+        cursor: pointer; 
+    }
+
+    @media screen and (max-width: 450px) {
+    
+        align-items: flex-start;
+        p{
+            font-size: 1.5rem;
+        }
+        .storeIcon{
+            font-size: 1.5rem;
+        }
+        
+    }
+   
+
+}
+
+.nav-searchbar{
+    display: flex;
+
+    @media screen and (max-width: 450px){
+        display: none;
+    }
+}
+
+
+
 
 .app__navbar-right-div{
     flex: 1;
@@ -66,14 +121,39 @@
     
     gap: 1rem;
     
+    .bin-div{
+        position: relative;
+        .quantity{
+            background-color: white;
+            border-radius:0% ;
+            width: 20px;
+            height: 20px;
+            border-radius: 50%;
+            border: solid 1px purple;
+            font-size: 15px;
+            padding-top: 1px;
+            font-family: 'Roboto'; 
+            font-weight: 600;
+            text-align: center;
+            color: purple;
 
-    .shop-icon {
-        cursor: pointer;
-        transition: all 0.3s ease ;
-        &:hover{
-            color: rgba(100, 1, 100, 0.829);
+            position: absolute;
+            top: -4px;
+            right: -4px;
         }
+        .shop-icon {
+            cursor: pointer;
+            transition: all 0.3s ease ;
+            
+            &:hover{
+                color: rgba(100, 1, 100, 0.829);
+            }
+        }
+
+
     }
+    
+
     .favorate-icon{
         cursor: pointer;
         transition: all 0.3s ease ;
@@ -97,6 +177,161 @@
             
             
         }
+    }
+
+
+    @media screen and (max-width: 450px) {
+        display: none;
+    }
+}
+
+.app__navbar-menu{
+    width:  35px;
+    height: 35px;
+    border-radius: 50%;
+    position: relative;
+
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(128, 0, 128, 0.171);
+   
+
+    svg{
+        width: 70%;
+        height: 70%;
+        color: purple;
+    }
+
+    .motion-div{
+        position: fixed;
+        top: 0;
+        bottom: 0;
+        right: 0;
+        z-index: 5;
+
+        padding: 1rem;
+        width: 80%;
+        height: 100vh;
+
+        display: flex;
+        justify-content: flex-start;
+        align-items: flex-end;
+        flex-direction: column;
+        gap: 1.5rem;
+
+        background: white;
+         
+
+        box-shadow: 0 0 20px rgba(168, 168, 168, 0.15);
+
+        svg{
+            
+            width: 30px;
+            height: 30px;
+            color: purple;
+            margin: 0.5rem 1rem;
+            
+        }
+
+
+        .search-bar-div{
+            display: flex;
+            width: 100%;
+
+        }
+
+        .icons-div{
+            display: flex;
+            align-items: center;
+            flex-direction: row;
+            justify-content: center;
+            width: 100%;
+            gap: 1rem;
+            
+            .bin-div{
+                position: relative;
+                .quantity{
+                    background-color: white;
+                    border-radius:0% ;
+                    width: 20px;
+                    height: 20px;
+                    border-radius: 50%;
+                    border: solid 1px purple;
+                    font-size: 15px;
+                    padding-top: 1px;
+                    font-family: 'Roboto'; 
+                    font-weight: 600;
+                    text-align: center;
+                    color: purple;
+        
+                    position: absolute;
+                    top: -4px;
+                    right: -4px;
+                }
+                .shop-icon {
+                    cursor: pointer;
+                    transition: all 0.3s ease ;
+                    margin: 0;
+                    
+                    &:hover{
+                        color: rgba(100, 1, 100, 0.829);
+                    }
+                }
+        
+        
+            }
+            .favorate-icon{
+               
+                margin: 0rem;
+            }
+
+            .sign-out-btn{
+                background-color: transparent;
+                border: none;
+                font-size: 18px;
+                color: black;
+                font-family: "Roboto";
+        
+                cursor: pointer;
+                transition: all 0.3s  ease-in-out ;
+        
+                &:hover{
+                    color: rgba(100, 1, 100, 0.829);
+                    
+                    
+                }
+            }
+        
+            
+        }
+        .navLink-div{
+            display: flex;
+            width: 100%;
+            justify-content: flex-start;
+            align-items: flex-start;
+            flex-direction: column;
+            .Navbar__NavLink{ /* each single link*/
+                text-decoration: none;
+                text-transform: uppercase;
+                border-top: 1px solid transparent;
+                padding: 0.5rem;
+                cursor: pointer;
+                transition: all 0.3s ease-in-out;
+        
+                
+        
+                &:hover{
+                    color: rgba(100, 1, 100, 0.829);
+                    border-top: 1px solid rgba(100, 1, 100, 0.829);
+                }
+            }   
+        } 
+    }
+
+    @media screen and (min-width: 800px) {
+        display: none;
     }
 }
 

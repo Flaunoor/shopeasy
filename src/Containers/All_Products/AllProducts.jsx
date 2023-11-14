@@ -12,7 +12,8 @@ import "slick-carousel/slick/slick-theme.css";
 import './AllProducts.scss';
 
 
-const AllProducts = () => {
+const AllProducts = ({setCartItems}) => {
+
   const [allProducts, setAllProducts] = useState([]);
   const [categories, setCategories] = useState([]);
 
@@ -36,6 +37,11 @@ const AllProducts = () => {
   },[])
 
 
+ 
+
+
+
+
   
   useEffect(()=>{
     const getProducts = async() =>{
@@ -57,13 +63,13 @@ const AllProducts = () => {
 
   const settings = {
     dots: true,
-    infinite: false,
-    speed: 2000,
+    infinite: true,
+    speed: 3000,
     slidesToShow: 5,
     slidesToScroll: 2,
     initialSlide: 0,
     autoplay: true,
-    autoplaySpeed: 3500,
+    autoplaySpeed: 4000,
     
     
     
@@ -88,8 +94,8 @@ const AllProducts = () => {
       {
         breakpoint: 480,
         settings: {
-          slidesToShow: 1,
-          slidesToScroll: 1,
+          slidesToShow: 2,
+          slidesToScroll: 2,
         },
       },
     ],
@@ -104,9 +110,9 @@ const AllProducts = () => {
      <div className='slider-container '>
       <Slider  {... settings}  className='sliderCategories'>
           {categories.map((category, index)=>(
-            <div className='category-item p-text '  key={index}>
+            <div className='category-item'  key={index}>
               <p className='p-dot'>.</p>
-              <p>{category}</p>
+              <p className='category-text'>{category}</p>
             </div>
           ))}
         </Slider>
@@ -122,12 +128,11 @@ const AllProducts = () => {
         
       >
         {allProducts.map((item ,index)=>(
-            <Box key={index}>
-              {item.id && <ProductCart product ={item} /> }
+          <Box key={index}>
+            {item.id && <ProductCart product ={item} setCartItems={setCartItems} /> }
+          </Box> 
 
-            </Box> 
-
-          ))}
+        ))}
 
       </Stack>
    </Stack>

@@ -7,22 +7,18 @@ import { ProductCart } from '../../Componants';
 import './Home.scss';
 
 import Slider from "react-slick";
-
-/*import "slick-carousel/slick/slick.css";
-import "slick-carousel/slick/slick-theme.css";*/
-
 import { Box } from '@mui/material';
 
-/*import { Carousel } from 'react-responsive-carousel';
-import 'react-responsive-carousel/lib/styles/carousel.min.css';*/
 
 
-const Home = () => {
+const Home = ({cartItems, setCartItems}) => {
   const navigate = useNavigate();
 
   const handleClickProduct = () =>{
    navigate("/products");
   }
+
+  
 
   const [products , setProducts] = useState([]);
   useEffect(() => {
@@ -46,7 +42,7 @@ const Home = () => {
   const settings = {
     dots: false,
     infinite: true,
-    speed: 2000,
+    speed: 3000,
     slidesToShow: 4,
     slidesToScroll: 3,
     autoplay: true,
@@ -65,9 +61,9 @@ const Home = () => {
       {
         breakpoint: 600,
         settings: {
-          slidesToShow: 2,
-          slidesToScroll: 2,
-          initialSlide: 2,
+          slidesToShow: 1,
+          slidesToScroll: 1,
+          initialSlide: 1,
         },
       },
       {
@@ -87,20 +83,20 @@ const Home = () => {
       <div className='app__home-header'>
         <img src={images.home} alt='home image'/>
         <div>
-          <p className='p-title' style={{fontSize:'80px'}}>ONLINE <span>SHOPPING</span></p>
-          <p className='p-title' style={{fontSize:'50px'}}>BUYING HAS BECOME EVEN <span>EASIER</span></p>
+          <p className='p-title home-title1' >ONLINE <span>SHOPPING</span></p>
+          <p className='p-title home-title2' >BUYING HAS BECOME EVEN <span>EASIER</span></p>
           <button className='shop-now-btn' onClick={handleClickProduct}>SHOP NOW</button>
         </div>
       </div>
 
       <div className='app__home-section1 app__flex'>
-        <p className='p-text'>Popular Product</p> 
-        <p  style={{fontSize:'60px', fontFamily:'normal serif'}}>TRENDING NOW </p>
+        <p className='p-text section1-p1'>Popular Product</p> 
+        <p className='section1-p2'>TRENDING NOW </p>
 
         <div className='sliderContainer'>
           <Slider {... settings}>
           {products.map((product , index)=>(
-          <Box key={index}>  {product.id && <ProductCart product={product} /> }</Box>
+          <Box key={index}>  {product.id && <ProductCart product={product} setCartItems={setCartItems}  /> }</Box>
           ))}
           </Slider>
         </div>
@@ -131,7 +127,7 @@ const Home = () => {
       <div className='app__home-section3'>
         <div className='why-us-div'>
           <p className='p-text'>BEST IN BUSINESS</p>
-          <p className='p-title'>WHY CHOOSE US</p>
+          <p className='p-big'style={{textAlign:'center'}}>WHY CHOOSE US</p>
           <p className='p-text' style={{textAlign:'center'}}>
             we believe and uphold a policy that the
             customer is always right, which is why we

@@ -27,6 +27,9 @@
 .p-title{
   font-size: 40px;
   font-family: "Roboto";
+  @media screen and (max-width :450px) {
+    font-size: 20px;
+  }
 }
 
 .p-text{
@@ -34,6 +37,10 @@
   color: black;
   font-family: "Roboto", sans-serif; 
   text-align: justify;
+
+  @media screen and (max-width :450px) {
+    font-size: 12px;
+  }
 }
 .p-bold{
   font-size: 50px;
@@ -43,5 +50,8 @@
 .p-big{
   font-size: 100px;
   font-family:"Roboto";
+  @media screen and (max-width :450px) {
+    font-size: 25px;
+  }
 
 }

@@ -1,18 +1,40 @@
 .app__searchbar-paper{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-start;
     padding: 0 1rem;
-    width: 500px;
+    width: 550px;
     transition: all 0.3s ease-in-out;
     &:hover{
         background-color: rgba(128, 128, 128, 0.11);
     }
-}
-.app__searchbar-btn{
-    padding: 0.5rem;
-}
-.app__searchbar-input{
-    width: 60%;
-    margin:0 1rem;
-    padding: 0rem 0.5rem;
-    padding-top: 0.5rem;
+    
+    
 
+    
+    .app__searchbar-input{
+        width: 60%;
+        margin:0.5rem 1rem;
+        padding: 0rem 0.5rem;
+        padding-top: 0.5rem;
+        font-size: 20px;
+        
+
+    }
+}
+
+@media screen and (max-width: 450px) {
+    .app__searchbar-paper{
+        padding: 0rem;
+        
+    
+        .app__searchbar-input{
+            margin: 0.5rem 0rem;
+            padding: 0.2rem 0.2rem;
+            font-size: 13px;
+            
+        }
+        
+    }  
 }

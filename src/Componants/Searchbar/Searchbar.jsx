@@ -22,17 +22,16 @@ const Searchbar = () => {
     >
 
       <IconButton 
-        
         className='app__seachbar-btn'
       >
           <Search />
       </IconButton>
       
-      <Input placeholder='Search for products...'
-              className='app__searchbar-input'
-              sx={{fontSize:'20px'}}
+      <Input  placeholder='Search for products...'
+              
               value={searchTerm}
               onChange={(e)=>setSearchTerm(e.target.value)}
+              className='app__searchbar-input'
               >
       </Input>
 
