@@ -10,6 +10,10 @@ import {Paper} from '@mui/material';
 import {Input} from '@mui/material';
 import { Divider} from '@mui/material';
 
+import LocationOnIcon from '@mui/icons-material/LocationOn';
+import EmailIcon from '@mui/icons-material/Email';
+import PhoneIcon from '@mui/icons-material/Phone';
+
 
 export default{
     StoreIcon,
@@ -22,7 +26,10 @@ export default{
     PersonIcon,
     HttpsIcon,
     Paper,
-    Input
+    Input,
+    LocationOnIcon,
+    EmailIcon,
+    PhoneIcon,
 
 
 }

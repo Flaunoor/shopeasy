@@ -95,7 +95,7 @@ const Navbar = ({cartItems}) => {
 
         <div className='bin-div'>
         <p className='quantity'>{cartItems}</p> 
-         <MUI.ShoppingCartIcon  className='shop-icon' fontSize='large' />
+         <NavLink to='/Cart'><MUI.ShoppingCartIcon  className='shop-icon' fontSize='large'/></NavLink>
         </div>
         <MUI.FavoriteIcon className='favorate-icon' fontSize='large'/> 
 
@@ -135,7 +135,7 @@ const Navbar = ({cartItems}) => {
              
               <MUI.FavoriteIcon className='favorate-icon' fontSize='large'/> 
 
-              <button className='sign-out-btn' onClick={handleSignInClick}>Sign Out</button> 
+              <button className='sign-out-btn' onClick={handleSignInClick}>{signIn ? 'Log Out' : 'Log In'}</button> 
 
               <MUI.Avatar
                 alt="User Profile"

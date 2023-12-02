@@ -51,7 +51,7 @@ const SignIn = () => {
 
       <div className='signInImg'><img src={images.login_pic} alt='login_pic'/></div>
       <h2>login</h2>
-      <p>Please enter your Username and password! (kminchelle,0lelplR)</p>
+      <div className='p'><p>Please enter your Username and password! (kminchelle,0lelplR)</p></div>
 
       <MUI.Paper className='username_Paper'>
         <MUI.PersonIcon fontSize='medium' className='username-icon'/> 

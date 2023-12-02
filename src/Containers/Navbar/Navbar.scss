@@ -228,8 +228,8 @@
 
         svg{
             
-            width: 30px;
-            height: 30px;
+            width: 28px;
+            height: 28px;
             color: purple;
             margin: 0.5rem 1rem;
             
@@ -255,11 +255,11 @@
                 .quantity{
                     background-color: white;
                     border-radius:0% ;
-                    width: 20px;
-                    height: 20px;
+                    width: 18px;
+                    height: 18px;
                     border-radius: 50%;
                     border: solid 1px purple;
-                    font-size: 15px;
+                    font-size: 12px;
                     padding-top: 1px;
                     font-family: 'Roboto'; 
                     font-weight: 600;
@@ -274,6 +274,7 @@
                     cursor: pointer;
                     transition: all 0.3s ease ;
                     margin: 0;
+                  
                     
                     &:hover{
                         color: rgba(100, 1, 100, 0.829);
@@ -285,6 +286,8 @@
             .favorate-icon{
                
                 margin: 0rem;
+                
+
             }
 
             .sign-out-btn{
@@ -312,6 +315,8 @@
             justify-content: flex-start;
             align-items: flex-start;
             flex-direction: column;
+            gap: 0rem;
+
             .Navbar__NavLink{ /* each single link*/
                 text-decoration: none;
                 text-transform: uppercase;
@@ -319,6 +324,7 @@
                 padding: 0.5rem;
                 cursor: pointer;
                 transition: all 0.3s ease-in-out;
+                font-size: 1rem;
         
                 
         

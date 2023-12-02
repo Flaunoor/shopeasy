@@ -24,7 +24,7 @@ const Searchbar = () => {
       <IconButton 
         className='app__seachbar-btn'
       >
-          <Search />
+          <Search className='svg'/>
       </IconButton>
       
       <Input  placeholder='Search for products...'

@@ -1,0 +1,118 @@
+.footer{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    
+    border-bottom: 1px solid rgba(128, 0, 128, 0.377);
+    border-top: 1px solid rgba(128, 0, 128, 0.377);
+    background-color: rgba(134, 92, 134, 0.068);
+    margin-top: 10rem;
+    gap: 2rem;
+    padding-bottom: 3rem;
+
+    
+    bottom: 0;
+
+    
+}
+.app__footer{
+    flex: 1;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 10rem;
+    padding: 5rem;
+    border-bottom: 1px solid rgba(128, 0, 128, 0.377);
+
+    @media screen and (max-width :450px){
+        flex-direction: column;
+        gap: 3rem;
+        align-items: flex-start;
+        justify-content: flex-start;
+        padding: 2rem;
+    }
+    
+
+    
+}
+
+.app__navbar-logo{
+    
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+   
+    .storeIcon{
+        font-size: 2.5rem;
+        
+    }
+    p{
+        cursor: pointer; 
+    }
+
+    @media screen and (max-width: 450px) {
+    
+        align-items: flex-start;
+        p{
+            font-size: 1.7rem;
+        }
+        .storeIcon{
+            font-size: 1.7rem;
+        }
+        
+    }
+   
+
+}
+.app__footer-aboutUs{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+    gap: 0.5rem;
+    p{
+        font-size: 1.7rem;
+        font-family: 'Roboto';
+        margin-bottom: 0.8rem;
+        @media screen and (max-width :450px){font-size: 1.2rem;}
+
+    }
+    .Navbar__NavLink{ /* each single link*/
+        text-decoration: none;
+        border-top: 1px solid transparent;
+      
+        cursor: pointer;
+        transition: all 0.3s ease ;
+
+        
+
+        &:hover{
+            color: rgba(100, 1, 100, 0.829);
+         
+        }
+    }
+}
+
+.app__footer-address{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+    gap: 0.5rem;
+    .address{
+        font-size: 1.7rem;
+        
+        font-family: 'Roboto';
+        margin-bottom: 0.8rem;
+        @media screen and (max-width :450px){font-size: 1.2rem;}
+    }
+    p{
+        color: rgb(65, 64, 64);
+
+    }
+}

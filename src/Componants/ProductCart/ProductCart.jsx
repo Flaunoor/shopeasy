@@ -55,7 +55,7 @@ const ProductCart = ({product, setCartItems}) => {
 
             <div className='app__productCart-info app__flex'>
                 <h2>{product?.title.slice(0,17)}</h2>
-                <MUI.Rating value={product?.rating} precision={0.5} size="small" readOnly  />
+                <MUI.Rating value={product?.rating} precision={0.5} size="small" readOnly className='rating' />
                 <p className='p-text'>$ {product?.price}</p> 
                  
             </div>

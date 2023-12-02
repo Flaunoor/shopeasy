@@ -6,3 +6,5 @@ export {default as AboutUs} from './AboutUs/AboutUs';
 export {default as SearchFeed} from './SearchFeed/SearchFeed';
 export {default as ProductDetails} from './ProductDetails/ProductDetails';
 export {default as SignIn} from './SignIn/SignIn';
+export {default as Cart} from './Cart/Cart';
+export {default as Footer} from './Footer/Footer';

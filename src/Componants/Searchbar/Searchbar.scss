@@ -28,13 +28,21 @@
     .app__searchbar-paper{
         padding: 0rem;
         
-    
+        .app__seachbar-btn{
+            padding: 0;
+            .svg{
+                width: 25px;
+                height: 25px;
+            }
+        }
+
         .app__searchbar-input{
             margin: 0.5rem 0rem;
             padding: 0.2rem 0.2rem;
             font-size: 13px;
             
         }
+        
         
     }  
 }

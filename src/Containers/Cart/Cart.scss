@@ -1,0 +1,131 @@
+.app__cart{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    gap: 2;
+   margin: 8rem 0rem;
+    .p-big{
+        margin-left: 2rem;
+    }
+   .p-title{
+     margin-left: 2rem;
+     cursor: pointer;
+     transition: 0.3s all ease;
+     &:hover{
+        color: rgba(128, 0, 128, 0.445);
+     }
+   }
+
+   .product-title{
+    text-decoration: none;
+   }
+}
+.div_tables{
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    justify-content: center;
+    gap: 2rem;
+    margin: 2rem 2rem;
+}
+.product_table{
+    flex: 1;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    border: solid 0.5px rgba(128, 0, 128, 0.459);
+    padding: 0.5rem;
+    
+
+    .tr-title{
+        td{
+            font-size: 1.5rem;
+            padding: 1.5rem;
+            align-items: center;
+            font-weight: bold;
+            color: rgb(90, 90, 90);
+            border-bottom: solid 0.5px rgba(128, 0, 128, 0.459);
+            background-color: rgba(128, 0, 128, 0.082);
+           
+        }
+       
+    }
+
+    .tr-items{
+        td{
+            
+            
+            font-size: 1.5rem;
+            padding: 2rem;
+            align-items: center;
+            border-bottom: solid 0.5px rgba(128, 0, 128, 0.459);
+            color: rgb(68, 68, 68);
+            div{
+                display: flex;
+                flex-direction: row;
+                align-items: center;
+                gap: 1rem;
+                img{
+                    width: 20%;
+                    border-radius: 5px;
+                }
+                p{
+                    cursor: pointer;
+                    transition: 0.1s  ease-in-out all;
+                    color: rgb(68, 68, 68);
+                    &:hover{
+                        color: black;
+                        
+                    }
+                }
+            }
+            .cancelicon{
+                font-size: 2rem;
+                color: rgba(128, 128, 128, 0.438);
+                cursor: pointer;
+                transition: 0.3s ease all;
+                &:hover{
+                    color: rgba(80, 79, 79, 0.658);
+                }
+            }
+        }
+    }
+   
+}
+.price_table{
+    
+    
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    border: solid 0.5px rgba(128, 0, 128, 0.459);
+    padding: 0.5rem;
+
+
+    .tr-title{
+        td{
+            font-size: 2rem;
+            padding: 2rem;
+            align-items: center;
+            font-weight: bold;
+            color: rgb(90, 90, 90);
+            border-bottom: solid 0.5px rgba(128, 0, 128, 0.459);
+            background-color: rgba(128, 0, 128, 0.082);
+           
+        }
+    }
+    .tr-items{
+        td{
+            font-size: 1.5rem;
+            padding: 2rem;
+            align-items: center;
+            border-bottom: solid 0.5px rgba(128, 0, 128, 0.459);
+            color: rgb(68, 68, 68);
+        }
+
+    }
+    
+
+
+}

@@ -38,7 +38,7 @@
     height: 100%;
 
     
-    border-radius: 0.5rem;
+    border-radius: 0.3rem;
     opacity: 0;
     transition: all 0.3s ease;
 
@@ -83,40 +83,43 @@
         color: black;
     }
 
-    .rating{
-        position: absolute;
-        padding: 0.3rem 0.3rem;
-        background-color: white;
-        top:-25px
-
-    }
 
 }
 
 
 @media screen and (max-width : 450px) {
     .app__productCart-SingleC{
-        width: 180px;
-        padding: 0.3rem;
+        width: 130px;
+        padding: 0.2rem;
+        &:hover{
+            box-shadow: 0 0 15px rgba(0, 0, 0, 0.11);
+            
+        }
     }
     .app__productCart-img{
-        height: 120px;
-        border-radius: 0.1rem;
+        height: 100px;
+        border-radius: 3px;
     }
     .app__productCart-info{
+        gap: 0.2rem;
         h2{
-            font-size: 17px;
+            font-size: 13px;
+        }
+        .rating{
+            font-size: 12px;
         }
     }
     .app__productCart-hover{
+        border-radius: 3px;
         &:hover{
-           
-        
-    
             div{
                 width: 25px;
-                height: 25px;
-                
+                height: 25px;     
+            }
+            svg{
+                width: 30%;
+                height: 30%;
+                color: white;
             }
         }
 
